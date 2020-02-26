@@ -23,16 +23,21 @@
 
         .plants-wrapper {
             display: flex;
+            overflow: auto;
             flex-direction: row;
             flex-wrap: wrap;
-            transform: scale(1) translate(29px, -15%);
-
+            transform: scale(1) translate(29px, 17%);
+            width: 320px;
+            height: 620px;
+        /*border: 5px solid black;*/
+            border-radius: 15px;
         }
 
         .plant-wrapper {
             display: flex;
             flex-direction: column;
-            width: 50%;
+            width: 45%;
+            padding: 4%;
         }
 
         .container {
@@ -40,101 +45,83 @@
             flex-direction: column;
         }
 
+
         .dashboard-header {
             font-weight: bold;
-            font-size: large;
+            font-size: x-large;
             font-family: didot;
-            width: 67%;
-            border: 2px solid black;
-            border-radius: 20px;
+            width: 70%;
+            border: 5px solid #333;
+            border-radius: 35px;
             /*border: rgba(1);*/
             margin: 1.75rem;
             margin-bottom: 2rem;
-            margin-top: 2rem;
+            margin-top: 3rem;
             padding: 6px;
-            transform: scale(1) translate(20px, -100%);
-            /*background-image:
-                url(.../images/headimage.png);*/
-            background-color: beige;
+            transform: scale(1) translate(10px, -30%);
+            background-color: #333;
+            position: fixed;
         }
 
-        .dashboard-header img {
-            transform: scale(2) translate(-90px, 9%);
+        /*.dashboard-header img {
+            transform: scale(2) translate(-90px, -45%);
             background-color: transparent;
-        }
+        }*/
 
-        .dashboard-header .special {
-            margin-left: 45px;
-            /*font-family: didot; */
-
+        .special{
+            font-family: didot; 
+            color: white;
+            text-align: center;
+            margin-left: 11%;
         }
 
         .specialname {
             font-family: didot;
+            position: center;
+            padding-left: 20px;
+            padding-top: 0.5rem;
 
         }
 
         /* The sidebar menu */
-        .sidebar {
-            height: 100%;
-            /* 100% Full-height */
-            width: 0;
-            /* 0 width - change this with JavaScript */
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
             position: fixed;
-            /* Stay in place */
-            z-index: 1;
-            /* Stay on top */
-            top: 0;
-            left: 0;
-            background-color: #111;
-            /* Black*/
-            overflow-x: hidden;
-            /* Disable horizontal scroll */
-            padding-top: 60px;
-            /* Place content 60px from the top */
-            transition: 0.5s;
-            /* 0.5 second transition effect to slide in the sidebar */
+            bottom: 0;
+            width: 87%;
+            border-radius: 35px;
+            margin-bottom: 1rem;
+            transform: scale(1) translate(11px, -30%);
         }
 
-        /* The sidebar links */
-        .sidebar a {
-            padding: 8px 8px 8px 32px;
-            text-decoration: none;
-            font-size: 25px;
-            font-family: didot;
-            color: lightgray;
+        .navbar a {
+            float: left;
             display: block;
-            transition: 0.3s;
+            border-radius: 35px;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            font-size: 17px;
+            font-family: didot;
+            margin-top: 2px;
+            margin-left: 7px;
         }
 
-        /* When you mouse over the navigation links, change their color */
-        .sidebar a:hover {
-            color: #f1f1f1;
+        .navbar a:hover {
+            background: #f1f1f1;
+            color: black;
         }
 
-        /* Position and style the close button (top right corner) */
-        .sidebar .closebtn {
-            position: absolute;
-            top: 0;
-            right: 25px;
-            font-size: 36px;
-            margin-left: 50px;
-        }
-
-        /* The button used to open the sidebar */
-        .openbtn {
-            font-size: 20px;
-            cursor: pointer;
-            background-color: #111;
+        .navbar a.active {
+            background-color: #4CAF50;
             color: white;
-            padding: 5px 13px;
-            border: none;
-            border-radius: 10px;
+            border-radius: 35px;
+            transform: scale(1) translate(-4px, -1%);
+            width: 26%;
         }
-
-        .openbtn:hover {
-            background-color: gray;
-        }
+        
 
         /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
         #main {
@@ -149,20 +136,25 @@
         }
 
         /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
-        @media screen and (max-height: 450px) {
-            .sidebar {
-                padding-top: 15px;
+        @media screen and (max-width: 600px) {
+            .navbar.responsive .icon {
+                position: absolute;
+                right: 0;
+                bottom:0;
+            }         
+            .navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
             }
 
-            .sidebar a {
-                font-size: 18px;
-            }
         }
 
         .addPlantButton img {
             width: 60px;
             height: 60px;
-            float: right;
+            display: flex;
+            transform: scale(1) translate(218px, 65%);
         }
 
 
@@ -213,21 +205,21 @@
 
 <body>
 
-    <body style="background-color:skyblue;">
+    <body style="background-color:beige;">
 
 
         <div class="container">
             <!-- Sidebar -->
-            <div id="mySidebar" class="sidebar">
-                <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-                <a class="dashboad-link">My Plant Profiles</a>
-                <a class="calendar-link">Calendar</a>
-                <a class="login-link">Login</a>
+            <div class="navbar">
+                <a href="#home" class="active">Home</a>
+                <a href="/calendar">Calendar</a>
+                <a href="/DB">View Plants</a>
+
             </div>
 
-            <div id="main">
+            <!--<div id="main">
                 <button class="openbtn" onclick="openNav()">&#9776;</button>
-            </div>
+            </div>-->
 
             <!-- /#sidebar-wrapper -->
             <div class="mid-container">
@@ -235,8 +227,7 @@
 
                 <div class="dashboard-header">
                     <span class="special">My Plant Profiles</span>
-                    <img src="/images/headimage.png" alt="Flowers in Chania" width="20px" height="20px">
-                    <!--class="headimage"-->
+                   <!-- <img src="/images/headimage.png" alt="Flowers in Chania" width="20px" height="20px">-->
                 </div>
 
                 <div class="plants-wrapper">

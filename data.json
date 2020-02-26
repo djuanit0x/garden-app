@@ -40,24 +40,6 @@
                 "note": "(Water 1 - 2 inches per week)",
                 "days": ["Tuesday", "Thursday", "Saturday"]
             }
-        },
-        {
-            "name": "Cactus",
-            "id": "3",
-            "description": "Silet Gem",
-            "imagePath": "/images/cactus.jpg",
-            "imagePath1":"/images/cactus.jpg",
-            "essential-1": "Does best in room temp (60 - 70  F",
-            "essential-2": "Grows best in bright filtered light",
-            "essential-3": "Allow solid to become dry to touch between watering days",
-            "whatNotToDo-1": "Does not do well in cold temp (45 F and below",
-            "whatNotToDo-2": "Avoid harsh, direct sunlight ",
-            "whatNotToDo-3": "Avoid over watering! This plant does better with less water ",
-
-            "schedules": {
-                "note": "(Water = 2 inches every other week)",
-                "days": ["Sunday"]
-            }
         }
     ],
     "DB": [
@@ -103,28 +85,8 @@
             }
         },
         {
-            "name": "Cactus",
-            "id": "3",
-            "description": "Silet Gem",
-            "imagePath": "/images/cactus.jpg",
-            "imagePath1":"/images/cactus.jpg",
-            "essential-1": "Need To Know: ",
-            "essential-2": "Does best in room temp (60 - 70  F)",
-            "essential-3": "Grows best in bright filtered light",
-            "essential-4": "Allow solid to become dry to touch between watering days",
-            "whatNotToDo-1": "What Not To Do: ",
-            "whatNotToDo-2": "Does not do well in cold temp (45 F and below",
-            "whatNotToDo-3": "Avoid harsh, direct sunlight ",
-            "whatNotToDo-4": "Avoid over watering! This plant does better with less water ",
-
-            "schedules": {
-                "note": "(Water = 2 inches every other week)",
-                "days": ["Sunday"]
-            }
-        },
-        {
             "name": "Aloe Vera",
-            "id": "4",
+            "id": "3",
             "description": "Aloe Barbadensis",
             "imagePath": "/images/aloevera-plant.png",
             "imagePath1": "/images/aloevera-plant.png",
@@ -144,7 +106,7 @@
         },
         {
             "name": "Birds of Paradise",
-            "id": "5",
+            "id": "4",
             "description": "Strelitzia",
             "imagePath": "/images/birdsOfParadise.png",
             "imagePath1": "/images/birdsOfParadise.png",
@@ -164,7 +126,7 @@
         },
         {
             "name": "Jade Plant",
-            "id": "6",
+            "id": "5",
             "description": "Crassula Ovata",
             "imagePath": "/images/jade-plant.png",
             "imagePath1": "/images/jade-plant.png",
@@ -184,7 +146,7 @@
         },
         {
             "name": "Kumquat Tree",
-            "id": "7",
+            "id": "6",
             "description": "Citrus Japonica",
             "imagePath": "/images/kumquat-plant.png",
             "imagePath1":"/images/kumquat-plant.png",
@@ -204,7 +166,7 @@
         },
         {
             "name": "Lavender",
-            "id": "8",
+            "id": "7",
             "description": "Lavandula",
             "imagePath": "/images/lavender-plant.png",
             "imagePath1": "/images/lavender-plant.png",
@@ -224,7 +186,7 @@
         },
         {
             "name": "Lemon Tree",
-            "id": "9",
+            "id": "8",
             "description": "Citrus x Limon",
             "imagePath": "/images/lemon-plant.png",
             "imagePath1": "/images/lemon-plant.png",
@@ -244,7 +206,7 @@
         },
         {
             "name": "Pomegranate",
-            "id": "10",
+            "id": "9",
             "description": "Punica Granatum",
             "imagePath": "/images/poma-plant.png",
             "imagePath1":"/images/poma-plant.png",
