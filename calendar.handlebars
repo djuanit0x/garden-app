@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang='en'>
+
+<head>
+    <title>Calendar</title>
+    <meta charset='utf-8' />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/home.css">
+    <link rel="stylesheet" href="css/reset.css" />
+
+
+    <link href='fullcalendar-4.3.1/packages/core/main.css' rel='stylesheet' />
+    <link href='fullcalendar-4.3.1/packages/daygrid/main.css' rel='stylesheet' />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+    <script src='fullcalendar-4.3.1/packages/core/main.js'></script>
+    <script src='fullcalendar-4.3.1/packages/daygrid/main.js'></script>
+
+    <script>
+        /* Set the width of the sidebar to 250px and the left margin of the page content to 250px */
+        function getRandomColor() {
+            var letters = '0123456789ABCDEF';
+            var color = '#';
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+
+        const openNav = () => {
+            document.getElementById("mySidebar").style.width = "70%"
+            $("#calendar").css({ "visibility": "hidden" });
+
+        }
+
+        /* Set the width of the sidebar to 0 and the left margin of the page content to 0 */
+        const closeNav = () => {
+            document.getElementById("mySidebar").style.width = "0";
+            document.getElementById("main").style.marginLeft = "0";
+            $("#calendar").css({ "visibility": "visible" });
+        }
+
+
+        $(document).ready(function () {
+            // Handler for .ready() called.
+            var calendarEl = document.getElementById('calendar');
+
+
+            var calendar = new FullCalendar.Calendar(calendarEl, {
+                plugins: ['dayGrid'],
+                events: [{
+                    start: '2020-02-07',
+                    end: '2020-02-07',
+                    title: 'ZZ Plant',
+                    backgroundColor: getRandomColor()
+                }, {
+                    start: '2020-02-09',
+                    end: '2020-02-09',
+                    title: 'Bell Pepper',
+                    backgroundColor: getRandomColor()
+                }]
+            });
+            calendar.render();
+
+            $(".dashboad-link").click(() => {
+                window.location.href = "/"
+            });
+
+            $(".login-link").click(() => {
+                window.location.href = "/login"
+            });
+        })
+
+    </script>
+
+    <style>
+        .dashboard-header {}
+
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            position: fixed;
+            bottom: 0;
+            width: 87%;
+            border-radius: 35px;
+            margin-bottom: 1rem;
+            transform: scale(1) translate(27px, -30%);
+        }
+
+        .navbar a {
+            float: left;
+            display: block;
+            border-radius: 35px;
+            color: #f2f2f2;
+            text-align: center;
+            padding: 14px;
+            text-decoration: none;
+            font-size: 17px;
+            font-family: didot;
+            margin-top: 0px;
+            margin-left: 11px;
+        }
+
+        .navbar a:hover {
+            background: #f1f1f1;
+            color: black;
+        }
+
+        .navbar a.active {
+            background-color: #4CAF50;
+            color: white;
+            border-radius: 35px;
+            transform: scale(1) translate(-.5px, 0%);
+            margin-top:2px;
+            margin-bottom: 2px;
+        }
+
+        /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+        #main {
+            transition: margin-left .5s;
+            /* If you want a transition effect */
+            padding: 20px;
+        }
+
+        @media screen and (max-width: 600px) {
+            .navbar.responsive .icon {
+                position: absolute;
+                right: 0;
+                bottom:0;
+            }         
+            .navbar.responsive a {
+                float: none;
+                display: block;
+                text-align: left;
+            }
+
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Sidebar -->
+    <div class="navbar">
+            <a href="/">Home</a>
+            <a href="/calendar"  class="active" >Calendar</a>
+            <a href="/DB">View Plants</a>
+    </div>
+
+    <!--<div id="main">
+        <button class="openbtn" onclick="openNav()">&#9776;</button>
+    </div>-->
+
+    <!-- /#sidebar-wrapper -->
+    <div id='calendar'></div>
+
+</body>
+
+</html>

@@ -1,0 +1,123 @@
+<html>
+
+<head>
+	<title>Login</title>
+	<meta charset='utf-8' />
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+	<script src="js/bootstrap.js"> </script>
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<script src="js/facebook.js"> </script>
+	<style>
+		.label {}
+		#username {
+			border-radius: 6%;
+			height: 40px;
+			width: 225px;
+			transform: translate(75px, 300px);
+			font-style: helvetica;
+			font-size: medium;
+		
+		}
+		#password {
+			border-radius: 6%;
+			height: 40px;
+			width: 225px;
+			transform: translate(75px, 300px);
+			font-style: helvetica;
+			font-size: medium;
+		}
+		.submit {
+			background-color: #008CBA;
+			border-radius: 6%;
+			height: 40px;
+			width: 225px;
+			transform: translate(75px, 300px);
+			font-style: helvetica;
+			font-size: medium;
+		}
+		.facebookLogin {
+			transform: translate(75px, 300px);
+			font-style: helvetica;
+			font-size: medium;
+		}
+
+	</style>
+
+	<script>
+		$(document).ready(function () {
+			$("button").click(() => {
+				localStorage.setItem("username", "guest")
+
+				window.location = "/";
+			});
+		})
+	</script>
+
+
+	<script>
+		$(document).ready(function () {
+			$("facebookLogin").click(() => {
+				localStorage.setItem("facebookLogin", "guest")
+
+				window.location = "/";
+			});
+		})
+	</script>
+
+	<script>
+  		window.fbAsyncInit = function() {
+    		FB.init({
+      			appId      : '1624700277711035',
+      			cookie     : true,
+      			xfbml      : true,
+      			version    : 'v6.0'
+    		});
+      
+    		FB.AppEvents.logPageView();   
+      	};
+
+  		(function(d, s, id){
+     		var js, fjs = d.getElementsByTagName(s)[0];
+     		if (d.getElementById(id)) {return;}
+     		js = d.createElement(s); js.id = id;
+     		js.src = "https://connect.facebook.net/en_US/sdk.js";
+     		fjs.parentNode.insertBefore(js, fjs);
+		}(document, 'script', 'facebook-jssdk'));
+
+
+	</script>
+
+
+</head>
+
+
+<body>
+
+	<body style="background-color:beige;"></body>
+
+	<label for="username"></label>
+	<input type="text" id="username" name="username" placeholder="Username">
+	<br><br>
+
+	<label for="password"></label>
+	<input type="text" id="password" name="password" placeholder="Password">
+	<br><br>
+	
+	<button class="submit" onclick="window.location.href = " ./routes/index.js" "value=" Submit">LOG IN</button>
+
+
+	<p class="facebookLogin">
+		Log in with Facebook
+		<fb:login-button 
+			scope="public_profile,email" 
+			onlogin="checkLoginState();" 
+			transform: translate(40px, 200px)>
+		</fb:login-button>
+	</p>
+
+
+	<img src="images/loginLogo.png" alt="Login Logo" style= "width:334px; height:114px;transform: translate(20px, -50px);">
+	
+
+
+</html>
