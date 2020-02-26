@@ -44,6 +44,7 @@ app.get("/login", login.view);
 
 app.get("/plant/:id", plant.view);
 app.post("/add", index.addPlant);
+app.post("/delete", index.deletePlant);
 
 // Example route
 // app.get('/users', user.list);

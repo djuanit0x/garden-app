@@ -29,7 +29,7 @@
             transform: scale(1) translate(29px, 17%);
             width: 320px;
             height: 620px;
-        /*border: 5px solid black;*/
+            /*border: 5px solid black;*/
             border-radius: 15px;
         }
 
@@ -68,8 +68,8 @@
             background-color: transparent;
         }*/
 
-        .special{
-            font-family: didot; 
+        .special {
+            font-family: didot;
             color: white;
             text-align: center;
             margin-left: 11%;
@@ -121,7 +121,7 @@
             transform: scale(1) translate(-4px, -1%);
             width: 26%;
         }
-        
+
 
         /* Style page content - use this if you want to push the page content to the right when you open the side navigation */
         #main {
@@ -140,8 +140,9 @@
             .navbar.responsive .icon {
                 position: absolute;
                 right: 0;
-                bottom:0;
-            }         
+                bottom: 0;
+            }
+
             .navbar.responsive a {
                 float: none;
                 display: block;
@@ -156,8 +157,6 @@
             display: flex;
             transform: scale(1) translate(218px, 65%);
         }
-
-
     </style>
 
     <script>
@@ -227,26 +226,49 @@
 
                 <div class="dashboard-header">
                     <span class="special">My Plant Profiles</span>
-                   <!-- <img src="/images/headimage.png" alt="Flowers in Chania" width="20px" height="20px">-->
+                    <!-- <img src="/images/headimage.png" alt="Flowers in Chania" width="20px" height="20px">-->
                 </div>
 
                 <div class="plants-wrapper">
+
+
+
 
                     {{#each plants}}
                     <div class="plant-wrapper">
                         <img class="avatar" data-value={{id}} d src={{imagePath}} alt="">
                         <span class="specialname">{{name}}</span>
                     </div>
+                    {{else}}
+                    <div>
+                        <p>You currently don't have plants! Add your plants by clicking the button below</p>
+                        <div class="addPlantButton">
+                            <!--<button class="addButton" onclick="openNav()">&#9776;</button>-->
+
+
+                            <a href='/DB'>
+                                <img src="/images/addButton@2x.png" alt="Add Plant">
+                            </a>
+                        </div>
+                    </div>
                     {{/each}}
+
                 </div>
 
                 <div class="addPlantButton">
                     <!--<button class="addButton" onclick="openNav()">&#9776;</button>-->
 
+                    {{#if plants}}
+                    <div class="addPlantButton">
+                        <!--<button class="addButton" onclick="openNav()">&#9776;</button>-->
 
-                    <a href='/DB'>
-                        <img src="/images/addButton@2x.png" alt="Add Plant">
-                    </a>
+
+                        <a href='/DB'>
+                            <img src="/images/addButton@2x.png" alt="Add Plant">
+                        </a>
+                    </div>
+                    {{/if}}
+
                 </div>
             </div>
 
