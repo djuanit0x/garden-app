@@ -26,7 +26,7 @@
             "id": "2",
             "description": "Capsicum",
             "imagePath": "/images/zz-small.png",
-            "imagePath1A": "/images/zz-big.png",
+            "imagePath1": "/images/zz-big.png",
             "essential-1": "Need To Know: ",
             "essential-2": " Peppers need a lot of sunlight in order in order to produce healthy fruit",
             "essential-3": " Start your pepper seeds indoors 8 - 10 weeks before spring in order to prevent your plant from the winter frosty months",
@@ -41,6 +41,7 @@
                 "days": ["Tuesday", "Thursday", "Saturday"]
             }
         }
+
     ],
     "DB": [
         {
