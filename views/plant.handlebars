@@ -60,26 +60,33 @@
 		.essentials-wrapper {
 			font-family: didot;
 			transform: scale(1) translate(10px, -80%);
+			border: 3px bold black;
+			width: 95%;
 		}
 		
 		.whatNotToDo-wrapper {
 			font-family: didot;
 			transform: scale(1) translate(10px, -60%);
+			width: 95%;
 		}
 
 		.main-ew {
 			font-family: didot;
 			font-weight: bold;
-			border: 1px bold black;
+			border: 3px bold black;
 			border-radius: 20px;
 			transform: scale(1) translate(0px, 30%);
+		}
+
+		.li {
+			border: 2px bold black;
 		}
 
 	</style>
 	<header>
 </head>
 
-<body>
+<body style="background-color:beige;">
 	<form>
 		<input type="button" value="Back" onclick="history.go(-1)">
 		<!--<img class="backbutton">-->
@@ -103,7 +110,6 @@
 			<li>{{whatNotToDo-4}}</li>
 		</div>
 	</section>
-	<body style="background-color:beige;">
 </body>
 
 </html>

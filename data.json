@@ -40,8 +40,27 @@
                 "note": "(Water 1 - 2 inches per week)",
                 "days": ["Tuesday", "Thursday", "Saturday"]
             }
-        }
+        },
+        {
+            "name": "Lemon Tree",
+            "id": "8",
+            "description": "Citrus x Limon",
+            "imagePath": "/images/lemon-plant.png",
+            "imagePath1": "/images/lemon-plant.png",
+            "essential-1": "Need To Know: ",
+            "essential-2": " Peppers need a lot of sunlight in order in order to produce healthy fruit",
+            "essential-3": " Start your pepper seeds indoors 8 - 10 weeks before spring in order to prevent your plant from the winter frosty months",
+            "essential-4": " Needs 1 - 2 inches of water per week",
+            "whatNotToDo-1": "What Not To Do: ",
+            "whatNotToDo-2": " Do not keep your plant seedlings outside. Peppers seeds need warmth in order to germinate or grow properly",
+            "whatNotToDo-3": " Do not keep your pepper in the shade, it loves lots of sunlight ",
+            "whatNotToDo-4": " Do not transplant your bell pepper until you are sure the frosty season is over. Bell peppers must be in tempuratures above 50 degrees F once outdoors",
 
+            "schedules": {
+                "note": "(Water 1 - 2 inches per week)",
+                "days": ["Tuesday", "Thursday", "Saturday"]
+            }
+        }
     ],
     "DB": [
         {
