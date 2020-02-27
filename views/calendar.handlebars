@@ -137,7 +137,22 @@
             z-index: 1;
         }
 
-        .plants-information-container {}
+        .plants-information-container {
+            position: absolute;
+            left: 20%;
+            top: 350px;
+        }
+
+        .plant-info-wrapper {
+            display: flex;
+            font-size: 25px;
+        }
+
+        .plant-schedule-logo {
+            width: 30px;
+            height: 30px;
+            border-radius: 50%;
+        }
     </style>
 
     <script>
@@ -161,10 +176,11 @@
 
 
                 const plantName = plantSchedulesEl.dataset.name;
-                const plantColor = getRandomColor();
+                const plantColor = plantSchedulesEl.dataset.color;
 
                 $(plantSchedulesEl).children('.event-calendar').get().forEach(el => {
                     const currSchedule = el.dataset.schedule;
+
                     const note = el.dataset.note;
                     el.style.backgroundColor = plantColor;
 
@@ -215,7 +231,32 @@
 
 
             plantInfoEl.forEach(el => {
+                const name = el.dataset.name;
                 const note = el.dataset.note;
+                const color = el.dataset.color;
+
+                // Plant Name
+                const plantNameEl = document.createElement('p');
+                plantNameEl.innerText = name;
+
+                // Wrapper for each plant notes
+                const plantInfoWrapperEl = document.createElement('div');
+                plantInfoWrapperEl.classList.add('plant-info-wrapper')
+
+                // Circle to indicate which plant schedule
+                const circleEl = document.createElement('div')
+                circleEl.classList.add('plant-schedule-logo');
+                circleEl.style.backgroundColor = color;
+
+                // An actual Plant note
+                const plantNoteEl = document.createElement('p')
+                plantNoteEl.innerText = note;
+
+                // Construct the elements from children to parent nodes
+                el.appendChild(plantInfoWrapperEl)
+                plantInfoWrapperEl.appendChild(circleEl)
+                plantInfoWrapperEl.appendChild(plantNameEl)
+                plantInfoWrapperEl.appendChild(plantNoteEl)
             })
 
         })
@@ -259,7 +300,7 @@
 
             {{#each allSchedules}}
 
-            <div class="event-calendar-wrapper" data-name={{plantName}}>
+            <div class="event-calendar-wrapper" data-name={{plantName}} data-color={{color}}>
 
 
                 {{#each schedules.days}}
@@ -268,6 +309,7 @@
 
 
                 {{/each}}
+
             </div>
             {{/each}}
 
@@ -279,8 +321,8 @@
             {{#each allSchedules}}
 
 
-            <div class="plant-note" data-name={{plantName}} data-note={{schedules.note}}></div>
-
+            <div class="plant-note" data-name={{plantName}} data-color={{schedules.color}} data-note={{schedules.note}}>
+            </div>
 
 
             {{/each}}

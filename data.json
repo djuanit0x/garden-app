@@ -15,10 +15,12 @@
             "whatNotToDo-2": " Does not do well in cold temp (45 F and below",
             "whatNotToDo-3": " Avoid harsh, direct sunlight ",
             "whatNotToDo-4": " Avoid over watering! This plant does better with less water ",
+            "color": "#ffa7bf",
 
             "schedules": {
                 "note": "(one\u00a0cup\u00a0of\u00a0water\u00a0ever\u00a0two\u00a0-\u00a0three\u00a0weeks)",
-                "days": ["Wednesday", "Friday"]
+                "days": ["Wednesday", "Friday"],
+                "color": "#ffa7bf"
             }
         },
         {
@@ -35,10 +37,12 @@
             "whatNotToDo-2": " Do not keep your plant seedlings outside. Peppers seeds need warmth in order to germinate or grow properly",
             "whatNotToDo-3": " Do not keep your pepper in the shade, it loves lots of sunlight ",
             "whatNotToDo-4": " Do not transplant your bell pepper until you are sure the frosty season is over. Bell peppers must be in tempuratures above 50 degrees F once outdoors",
+            "color": "#74ffd9",
 
             "schedules": {
                 "note": "(Water\u00a01\u00a0-\u00a02\u00a0inches\u00a0per\u00a0week)",
-                "days": ["Tuesday", "Thursday", "Saturday"]
+                "days": ["Tuesday", "Thursday", "Saturday"],
+                "color": "#74ffd9"
             }
         },
         {
@@ -55,10 +59,12 @@
             "whatNotToDo-2": " Do not keep your plant seedlings outside. Peppers seeds need warmth in order to germinate or grow properly",
             "whatNotToDo-3": " Do not keep your pepper in the shade, it loves lots of sunlight ",
             "whatNotToDo-4": " Do not transplant your bell pepper until you are sure the frosty season is over. Bell peppers must be in tempuratures above 50 degrees F once outdoors",
+            "color": "#ab0000",
 
             "schedules": {
                 "note": "(Water\u00a01\u00a0-\u00a02\u00a0inches\u00a0per\u00a0week)",
-                "days": ["Tuesday", "Thursday", "Saturday"]
+                "days": ["Tuesday", "Thursday", "Saturday"],
+                "color": "#ab0000"
             }
         }
     ],
@@ -78,10 +84,12 @@
             "whatNotToDo-2": " Does not do well in cold temp (45 F and below",
             "whatNotToDo-3": " Avoid harsh, direct sunlight ",
             "whatNotToDo-4": " Avoid over watering! This plant does better with less water ",
+            "color": "#ffa7bf",
 
             "schedules": {
                 "note": "(One\u00a0cup\u00a0of\u00a0water\u00a0ever\u00a0two\u00a0-\u00a0three\u00a0weeks)",
-                "days": ["Wednesday", "Friday"]
+                "days": ["Wednesday", "Friday"],
+                "color": "#ffa7bf"
             }
         },
         {
@@ -98,10 +106,12 @@
             "whatNotToDo-2": " Do not keep your plant seedlings outside. Peppers seeds need warmth in order to germinate or grow properly",
             "whatNotToDo-3": " Do not keep your pepper in the shade, it loves lots of sunlight ",
             "whatNotToDo-4": " Do not transplant your bell pepper until you are sure the frosty season is over. Bell peppers must be in tempuratures above 50 degrees F once outdoors",
+            "color": "#74ffd9",
 
             "schedules": {
                 "note": "(1\u00a0cup\u00a0of\u00a0water\u00a0ever\u00a02\u00a0-\u00a03\u00a0weeks)",
-                "days": ["Wednesday", "Friday"]
+                "days": ["Wednesday", "Friday"],
+                "color": "#74ffd9"
             }
         },
         {
@@ -118,10 +128,12 @@
             "whatNotToDo-2": "Do not leave your aloe plant outside if it will be below 55 degrees",
             "whatNotToDo-3": "Avoid over watering",
             "whatNotToDo-4": "Do not fertilize more than once a month",
+            "color": "#ab0000",
 
             "schedules": {
                 "note": "(1\u00a0cup\u00a0of\u00a0water\u00a0ever\u00a02\u00a0-\u00a03\u00a0weeks)",
-                "days": ["Wednesday", "Friday"]
+                "days": ["Wednesday", "Friday"],
+                "color": "#ab0000"
             }
         },
         {
@@ -138,10 +150,12 @@
             "whatNotToDo-2": " Does not do well in cold temp (45 F and below",
             "whatNotToDo-3": " Avoid harsh, direct sunlight ",
             "whatNotToDo-4": " Avoid over watering! This plant does better with less water ",
+            "color": "#ea3132",
 
             "schedules": {
                 "note": "(1\u00a0cup\u00a0of\u00a0water\u00a0ever\u00a02\u00a0-\u00a03\u00a0weeks)",
-                "days": ["Wednesday", "Friday"]
+                "days": ["Wednesday", "Friday"],
+                "color": "#ea3132"
             }
         },
         {
@@ -158,10 +172,12 @@
             "whatNotToDo-2": " Do not keep your plant seedlings outside. Peppers seeds need warmth in order to germinate or grow properly",
             "whatNotToDo-3": " Do not keep your pepper in the shade, it loves lots of sunlight ",
             "whatNotToDo-4": " Do not transplant your bell pepper until you are sure the frosty season is over. Bell peppers must be in tempuratures above 50 degrees F once outdoors",
+            "color": "#ccff66",
 
             "schedules": {
                 "note": "(Water\u00a01\u00a0-\u00a02\u00a0inches\u00a0per\u00a0week)",
-                "days": ["Tuesday", "Thursday", "Saturday"]
+                "days": ["Tuesday", "Thursday", "Saturday"],
+                "color": "#ccff66"
             }
         },
         {
@@ -169,7 +185,7 @@
             "id": "6",
             "description": "Citrus Japonica",
             "imagePath": "/images/kumquat-plant.png",
-            "imagePath1":"/images/kumquat-plant.png",
+            "imagePath1": "/images/kumquat-plant.png",
             "essential-1": "Need To Know: ",
             "essential-2": "Does best in room temp (60 - 70  F",
             "essential-3": "Grows best in bright filtered light",
@@ -178,10 +194,12 @@
             "whatNotToDo-2": "Does not do well in cold temp (45 F and below)",
             "whatNotToDo-3": "Avoid harsh, direct sunlight ",
             "whatNotToDo-4": "Avoid over watering! This plant does better with less water ",
+            "color": "#b6fcd5",
 
             "schedules": {
                 "note": "(Water\u00a0=\u00a02\u00a0inches\u00a0every\u00a0other\u00a0week)",
-                "days": ["Sunday"]
+                "days": ["Sunday"],
+                "color": "#b6fcd5"
             }
         },
         {
@@ -198,10 +216,12 @@
             "whatNotToDo-2": " Does not do well in cold temp (45 F and below",
             "whatNotToDo-3": " Avoid harsh, direct sunlight ",
             "whatNotToDo-4": " Avoid over watering! This plant does better with less water ",
+            "color": "#e6e6fa",
 
             "schedules": {
                 "note": "(1\u00a0cup\u00a0of\u00a0water\u00a0ever\u00a02\u00a0-\u00a03\u00a0weeks)",
-                "days": ["Wednesday", "Friday"]
+                "days": ["Wednesday", "Friday"],
+                "color": "#e6e6fa"
             }
         },
         {
@@ -218,10 +238,12 @@
             "whatNotToDo-2": " Do not keep your plant seedlings outside. Peppers seeds need warmth in order to germinate or grow properly",
             "whatNotToDo-3": " Do not keep your pepper in the shade, it loves lots of sunlight ",
             "whatNotToDo-4": " Do not transplant your bell pepper until you are sure the frosty season is over. Bell peppers must be in tempuratures above 50 degrees F once outdoors",
+            "color": "#b2dfee",
 
             "schedules": {
                 "note": "(Water\u00a01\u00a0-\u00a02\u00a0inches\u00a0per\u00a0week)",
-                "days": ["Tuesday", "Thursday", "Saturday"]
+                "days": ["Tuesday", "Thursday", "Saturday"],
+                "color": "#b2dfee"
             }
         },
         {
@@ -229,7 +251,7 @@
             "id": "9",
             "description": "Punica Granatum",
             "imagePath": "/images/poma-plant.png",
-            "imagePath1":"/images/poma-plant.png",
+            "imagePath1": "/images/poma-plant.png",
             "essential-1": "Need To Know: ",
             "essential-2": "Does best in room temp (60 - 70  F",
             "essential-3": "Grows best in bright filtered light",
@@ -238,12 +260,13 @@
             "whatNotToDo-2": "Does not do well in cold temp (45 F and below",
             "whatNotToDo-3": "Avoid harsh, direct sunlight ",
             "whatNotToDo-4": "Avoid over watering! This plant does better with less water ",
+            "color": "#0095b6",
 
             "schedules": {
                 "note": "(Water\u00a0=\u00a02\u00a0inches\u00a0every\u00a0other\u00a0week)",
-                "days": ["Sunday"]
+                "days": ["Sunday"],
+                "color": "#0095b6"
             }
         }
-
     ]
 }
