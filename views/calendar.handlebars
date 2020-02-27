@@ -154,6 +154,8 @@
             background-color: chartreuse;
             z-index: 1;
         }
+
+        .plants-information-container {}
     </style>
 
     <script>
@@ -181,7 +183,7 @@
 
                 $(plantSchedulesEl).children('.event-calendar').get().forEach(el => {
                     const currSchedule = el.dataset.schedule;
-
+                    const note = el.dataset.note;
                     el.style.backgroundColor = plantColor;
 
                     switch (currSchedule) {
@@ -227,7 +229,12 @@
                 });
             })
 
+            const plantInfoEl = $('.plants-information-container').children(".plant-note").get();
 
+
+            plantInfoEl.forEach(el => {
+                const note = el.dataset.note;
+            })
 
         })
     </script>
@@ -268,6 +275,18 @@
             {{/each}}
 
 
+
+
+        </div>
+        <div class="plants-information-container">
+            {{#each allSchedules}}
+
+
+            <div class="plant-note" data-name={{plantName}} data-note={{schedules.note}}></div>
+
+
+
+            {{/each}}
         </div>
     </div>
 
