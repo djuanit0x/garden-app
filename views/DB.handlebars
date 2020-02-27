@@ -151,8 +151,9 @@
             .navbar.responsive .icon {
                 position: absolute;
                 right: 0;
-                bottom:0;
-            }         
+                bottom: 0;
+            }
+
             .navbar.responsive a {
                 float: none;
                 display: block;
@@ -173,7 +174,6 @@
             background-color: beige;
             margin-left: 1.5rem;
         }
-
     </style>
 
     <script>
@@ -185,17 +185,7 @@
                     const plantId = plantImg.dataset.value;
                     const plantName = plantImg.dataset.name;
 
-                    try {
-
-                        $.post("/add", { plantId: plantId }, function (data) {
-                            console.log("success");
-                        });
-                        window.alert(`Add ${plantName} to my plants`)
-                    } catch (err) {
-                        console.err(err)
-                    }
-
-
+                    window.location.href = `/plant/${plantId}`;
 
                 });
             });

@@ -86,66 +86,94 @@
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
-			transform:translate(10px,10px);
-			
+			transform: translate(10px, 10px);
+
 		}
 
 		.tuesday-button-wrapper {
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
-			transform:translate(15px,10px);
+			transform: translate(15px, 10px);
 		}
 
 		.wednesday-button-wrapper {
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
-			transform:translate(20px,10px);
+			transform: translate(20px, 10px);
 		}
 
 		.thursday-button-wrapper {
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
-			transform:translate(25px,10px);
+			transform: translate(25px, 10px);
 		}
 
 		.friday-button-wrapper {
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
-			transform:translate(30px,10px);
+			transform: translate(30px, 10px);
 		}
 
 		.saturday-button-wrapper {
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
-			transform:translate(35px,10px);
+			transform: translate(35px, 10px);
 		}
 
 		.sunday-button-wrapper {
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
-			transform:translate(40px,10px);
+			transform: translate(40px, 10px);
+		}
+
+		.add-button-wrapper {
+			transform: translate(120px, -20px);
+
 		}
 
 		.delete-button-wrapper {
-			transform:translate(120px,-20px);	
+			transform: translate(120px, -20px);
 
 		}
-
-		
 	</style>
 	<script>
 		$(document).ready(function () {
 
+			// Hide Delete button when visiting from Discover page
+			if (document.referrer.includes('DB')) {
+				document.querySelector(".add-button-wrapper").style.visibility = "visible";
+				document.querySelector(".delete-button-wrapper").style.visibility = "hidden";
+			} else { // Hide Add button when visiting from Discover page
+				document.querySelector(".add-button-wrapper").style.visibility = "hidden";
+				document.querySelector(".delete-button-wrapper").style.visibility = "visible";
+			}
+
 			// Handler for .ready() called.
+			const addButtonEl = $('.add-button-wrapper').children('button').get()[0];
 			const deleteButtonEl = $('.delete-button-wrapper').children('button').get()[0];
 
 
+			addButtonEl.addEventListener('click', function () {
+				const plantId = addButtonEl.dataset.value;
+				const plantName = addButtonEl.dataset.name;
+
+				try {
+
+					$.post("/add", { plantId: plantId }, function (data) {
+						console.log("success");
+					});
+					window.alert(`Add ${plantName} to my plants`)
+				} catch (err) {
+					console.err(err)
+				}
+
+			});
 			deleteButtonEl.addEventListener('click', function () {
 				const plantId = deleteButtonEl.dataset.value;
 				const plantName = deleteButtonEl.dataset.name;
@@ -159,6 +187,8 @@
 					console.err(err)
 				}
 			});
+
+
 
 		})
 	</script>
@@ -190,7 +220,7 @@
 		</div>
 
 		<div class="plantCalendar">
-  			<strong>Select Watering Days</strong>
+			<strong>Select Watering Days</strong>
 			<p>The chosen watering days will be displayed on the Plant Calendar.</p>
 
 			<button class="monday-button-wrapper" style="background-color:salmon;" onclick="alert('Monday')">
@@ -223,13 +253,18 @@
 
 		</div>
 
-		
+		<div class="add-button-wrapper">
+			<button data-value={{id}} data-name={{name}} style="background-color: green;">
+				Add Plant Profile
+			</button>
+		</div>
+
 		<div class="delete-button-wrapper">
 			<button data-value={{id}} data-name={{name}} style="background-color: pink;">
 				Delete Plant Profile
 			</button>
 		</div>
-		
+
 	</section>
 
 	<body style="background-color:beige;">

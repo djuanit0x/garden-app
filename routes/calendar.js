@@ -21,6 +21,5 @@ exports.view = function(req, res) {
     let schedulesObj = {};
     schedulesObj.allSchedules = allSchedules;
 
-    console.dir(schedulesObj)
     res.render("calendar", schedulesObj);
 };

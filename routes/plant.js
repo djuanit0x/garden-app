@@ -13,7 +13,7 @@ exports.view = function(req, res) {
 
     res.render(
         "plant",
-        data.plants.find(plant => plant.id === plantId) // finding the plant based on their assigned unique id
+        data.DB.find(plant => plant.id === plantId) // finding the plant based on their assigned unique id
     );
 };
 
