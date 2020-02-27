@@ -105,8 +105,9 @@
             .navbar.responsive .icon {
                 position: absolute;
                 right: 0;
-                bottom:0;
-            }         
+                bottom: 0;
+            }
+
             .navbar.responsive a {
                 float: none;
                 display: block;
@@ -121,13 +122,13 @@
         }
 
         .calendar-image {
-            position: relative;
+            position: absolute;
             width: 350px;
             height: 250px;
         }
 
         .event-calendar {
-            position: relative;
+            position: absolute;
             left: 10px;
             top: 70px;
             width: 30px;
@@ -139,13 +140,14 @@
 
         .plants-information-container {
             position: absolute;
-            left: 20%;
-            top: 350px;
+            font-size: 15px;
+            left: 1%;
+            top: 400px;
         }
 
         .plant-info-wrapper {
             display: flex;
-            font-size: 25px;
+
         }
 
         .plant-schedule-logo {
@@ -267,10 +269,10 @@
 
     <!-- Sidebar -->
     <div class="navbar">
-            <a href="/">Home</a>
-            <a href="/calendar"  class="active">Calendar</a>
-            <a href="/DB">View Plants</a>
-        </div>
+        <a href="/">Home</a>
+        <a href="/calendar" class="active">Calendar</a>
+        <a href="/DB">View Plants</a>
+    </div>
 
     <div class="dashboard-header">
         <h1 style="font-weight: bold;
@@ -286,8 +288,7 @@
             transform: scale(1) translate(40px, -10%);
             background-color: #333;
             position: absolute;
-            top: 5px;"
-            >Watering Calendar</h1>
+            top: 5px;">Watering Calendar</h1>
     </div>
     <!--<div id="main">
         <button class="openbtn" onclick="openNav()">&#9776;</button>
