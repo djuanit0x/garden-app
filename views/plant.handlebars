@@ -1,9 +1,9 @@
 <html>
 
 <head>
-	<title>Dashboard</title>
+	<title>{{name}}</title>
 	<meta charset="utf-8">
-	{{!-- <script src="js/jquery-1.11.0.js"> </script> --}}
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 	{{!-- <script src="js/bootstrap.js"> </script>
 	<script src="js/hci-friends.js"></script> --}}
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -40,8 +40,8 @@
 		}
 
 		.backbutton {
-			background-image: 
-     			url('./desktop/.../images/backbutton@3x.png');
+			background-image:
+				url('./desktop/.../images/backbutton@3x.png');
 
 		}
 
@@ -63,7 +63,7 @@
 			border: 3px bold black;
 			width: 95%;
 		}
-		
+
 		.whatNotToDo-wrapper {
 			font-family: didot;
 			transform: scale(1) translate(10px, -60%);
@@ -78,11 +78,38 @@
 			transform: scale(1) translate(0px, 30%);
 		}
 
+<<<<<<< HEAD
 		.li {
 			border: 2px bold black;
 		}
 
+=======
+		.delete-button-wrapper {}
+>>>>>>> 024047ce4aec8b7275f447622d966224bbe7f269
 	</style>
+	<script>
+		$(document).ready(function () {
+
+			// Handler for .ready() called.
+			const deleteButtonEl = $('.delete-button-wrapper').children('button').get()[0];
+
+
+			deleteButtonEl.addEventListener('click', function () {
+				const plantId = deleteButtonEl.dataset.value;
+				const plantName = deleteButtonEl.dataset.name;
+
+				try {
+					$.post("/delete", { plantId: plantId }, function (data) {
+						console.log("success");
+					});
+					window.location.href = "/"
+				} catch (err) {
+					console.err(err)
+				}
+			});
+
+		})
+	</script>
 	<header>
 </head>
 
@@ -109,7 +136,19 @@
 			<li>{{whatNotToDo-3}}</li>
 			<li>{{whatNotToDo-4}}</li>
 		</div>
+
+		<div class="delete-button-wrapper">
+			<button data-value={{id}} data-name={{name}}>
+				Remove
+			</button>
+		</div>
 	</section>
+<<<<<<< HEAD
 </body>
+=======
+
+	<body style="background-color:beige;">
+	</body>
+>>>>>>> 024047ce4aec8b7275f447622d966224bbe7f269
 
 </html>

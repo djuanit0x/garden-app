@@ -16,6 +16,9 @@ exports.view = function(req, res) {
             schedules
         });
     }
+    let schedulesObj = {};
+    schedulesObj.allSchedules = allSchedules;
 
-    res.render("calendar", allSchedules);
+    console.dir(schedulesObj)
+    res.render("calendar", schedulesObj);
 };
