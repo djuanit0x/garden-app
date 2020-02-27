@@ -10,10 +10,12 @@ exports.view = function(req, res) {
     for (let idx = 0; idx < data.plants.length; idx++) {
         let plantName = data.plants[idx].name;
         let schedules = data.plants[idx].schedules;
+        let color = data.plants[idx].color;
 
         allSchedules.push({
             plantName,
-            schedules
+            schedules,
+            color
         });
     }
     let schedulesObj = {};
