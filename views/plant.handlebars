@@ -78,7 +78,51 @@
 			transform: scale(1) translate(0px, 30%);
 		}
 
+
+		.monday-button-wrapper {
+			width: 40px;
+			height: 40px;
+			border-radius: 6%;
+		}
+
+		.tuesday-button-wrapper {
+			width: 40px;
+			height: 40px;
+			border-radius: 6%;
+		}
+
+		.wednesday-button-wrapper {
+			width: 40px;
+			height: 40px;
+			border-radius: 6%;
+		}
+
+		.thursday-button-wrapper {
+			width: 40px;
+			height: 40px;
+			border-radius: 6%;
+		}
+
+		.friday-button-wrapper {
+			width: 40px;
+			height: 40px;
+			border-radius: 6%;
+		}
+
+		.saturday-button-wrapper {
+			width: 40px;
+			height: 40px;
+			border-radius: 6%;
+		}
+
+		.sunday-button-wrapper {
+			width: 40px;
+			height: 40px;
+			border-radius: 6%;
+		}
+
 		.delete-button-wrapper {
+			transform:translate(120px,65px);	
 
 		}
 
@@ -134,40 +178,44 @@
 			<li>{{whatNotToDo-4}}</li>
 		</div>
 
-		<div class="delete-button-wrapper">
-			<button data-value={{id}} data-name={{name}}>
-				Delete Plant Profile
-			</button>
+		<div class="plantCalendarHeading">
+  			<h3>Selected Watering Days</h3>
+			<p>The chosen watering days will be displayed on the Plant Calendar.</p>
 		</div>
 
-		<button type="monday-button-wrapper" style="background-color:beige" onclick="alert('Monday')">
+		<button class="monday-button-wrapper" style="background-color:beige; transform:translate(10px,10px)" onclick="alert('Monday')">
 				M
 		</button>
 
-		<button type="tuesday-button-wrapper" style="background-color:beige" onclick="alert('Tuesday!')">
+		<button class="tuesday-button-wrapper" style="background-color:beige; transform:translate(15px,10px);" onclick="alert('Tuesday!')">
 				Tu
 		</button>
 
-		<button type="wednesday-button-wrapper" style="background-color:beige" onclick="alert('Wednesday!')">
+		<button class="wednesday-button-wrapper" style="background-color:beige; transform:translate(20px,10px);" onclick="alert('Wednesday!')">
 				W
 		</button>
 
-		<button type="thursday-button-wrapper" style="background-color:beige" onclick="alert('Thursday!')">
+		<button class="thursday-button-wrapper" style="background-color:beige; transform:translate(25px,10px);" onclick="alert('Thursday!')">
 				Th
 		</button>
 
-		<button type="friday-button-wrapper" style="background-color:beige" onclick="alert('Friday!')">
+		<button class="friday-button-wrapper" style="background-color:beige; transform:translate(30px,10px);" onclick="alert('Friday!')">
 				F
 		</button>
 
-		<button type="saturday-button-wrapper" style="background-color:beige" onclick="alert('Saturday!')">
+		<button class="saturday-button-wrapper" style="background-color:beige; transform:translate(35px,10px);" onclick="alert('Saturday!')">
 				Sa
 		</button>
 
-		<button type="sunday-button-wrapper" style="background-color:beige" onclick="alert('Sunday!')">
+		<button class="sunday-button-wrapper" style="background-color:beige; transform:translate(40px,10px);" onclick="alert('Sunday!')">
 				Su
 		</button>
 
+		<div class="delete-button-wrapper">
+			<button data-value={{id}} data-name={{name}} style="background-color: pink;">
+				Delete Plant Profile
+			</button>
+		</div>
 		
 	</section>
 
