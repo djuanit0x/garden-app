@@ -93,6 +93,7 @@
             position: fixed;
             bottom: 0;
             width: 87%;
+            z-index: 99;
             border-radius: 35px;
             margin-bottom: 1rem;
             transform: scale(1) translate(11px, -30%);
@@ -108,6 +109,7 @@
             text-decoration: none;
             font-size: 17px;
             font-family: didot;
+
             margin-top: 2px;
             margin-left: 7px;
         }
@@ -208,56 +210,39 @@
 <body style="background-color:beige;">
 
 
-        <div class="container">
-            <!-- Sidebar -->
-            <div class="navbar">
-                <a href="#home" class="active">Home</a>
-                <a href="/calendar">Calendar</a>
-                <a href="/DB">View Plants</a>
+    <div class="container">
+        <!-- Sidebar -->
+        <div class="navbar">
+            <a href="/" class="active">Home</a>
+            <a href="/calendar">Calendar</a>
+            <a href="/DB">View Plants</a>
 
-            </div>
+        </div>
 
-            <!--<div id="main">
+        <!--<div id="main">
                 <button class="openbtn" onclick="openNav()">&#9776;</button>
             </div>-->
 
-            <!-- /#sidebar-wrapper -->
-            <div class="mid-container">
+        <!-- /#sidebar-wrapper -->
+        <div class="mid-container">
 
 
-                <div class="dashboard-header">
-                    <span class="special">My Plant Profiles</span>
-                    <!-- <img src="/images/headimage.png" alt="Flowers in Chania" width="20px" height="20px">-->
+            <div class="dashboard-header">
+                <span class="special">My Plant Profiles</span>
+                <!-- <img src="/images/headimage.png" alt="Flowers in Chania" width="20px" height="20px">-->
+            </div>
+
+            <div class="plants-wrapper">
+
+
+                {{#each plants}}
+                <div class="plant-wrapper">
+                    <img class="avatar" data-value={{id}} d src={{imagePath}} alt="">
+                    <span class="specialname">{{name}}</span>
                 </div>
-
-                <div class="plants-wrapper">
-
-
-                    {{#each plants}}
-                    <div class="plant-wrapper">
-                        <img class="avatar" data-value={{id}} d src={{imagePath}} alt="">
-                        <span class="specialname">{{name}}</span>
-                    </div>
-                    {{else}}
-                    <div>
-                        <p>You currently don't have plants! Add your plants by clicking the button below</p>
-                        <div class="addPlantButton">
-                            <!--<button class="addButton" onclick="openNav()">&#9776;</button>-->
-
-
-                            <a href='/DB'>
-                                <img src="/images/addButton@2x.png" alt="Add Plant">
-                            </a>
-                        </div>
-                    </div>
-                    {{/each}}
-
-                </div>
-
-                <div class="addPlantButton">
-                    <!--<button class="addButton" onclick="openNav()">&#9776;</button>-->
-
-                    {{#if plants}}
+                {{else}}
+                <div>
+                    <p>You currently don't have plants! Add your plants by clicking the button below</p>
                     <div class="addPlantButton">
                         <!--<button class="addButton" onclick="openNav()">&#9776;</button>-->
 
@@ -266,13 +251,30 @@
                             <img src="/images/addButton@2x.png" alt="Add Plant">
                         </a>
                     </div>
-                    {{/if}}
-
                 </div>
+                {{/each}}
+
             </div>
 
+            <div class="addPlantButton">
+                <!--<button class="addButton" onclick="openNav()">&#9776;</button>-->
+
+                {{#if plants}}
+                <div class="addPlantButton">
+                    <!--<button class="addButton" onclick="openNav()">&#9776;</button>-->
+
+
+                    <a href='/DB'>
+                        <img src="/images/addButton@2x.png" alt="Add Plant">
+                    </a>
+                </div>
+                {{/if}}
+
+            </div>
         </div>
 
-    </body>
+    </div>
+
+</body>
 
 </html>
