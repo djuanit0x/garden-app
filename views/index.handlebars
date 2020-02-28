@@ -23,7 +23,7 @@
 
         .plants-wrapper {
             display: flex;
-            overflow: auto;
+            overflow: hidden;
             flex-direction: row;
             flex-wrap: wrap;
             transform: scale(1) translate(15px, 25%);
@@ -88,7 +88,6 @@
 
         /* The sidebar menu */
         .navbar {
-            overflow: hidden;
             background-color: #333;
             position: absolute;
             top:100%;
@@ -234,7 +233,7 @@
                 <!-- <img src="/images/headimage.png" alt="Flowers in Chania" width="20px" height="20px">-->
             </div>
 
-            <div class="plants-wrapper">
+            <div class="plants-wrapper" overflow>
 
 
                 {{#each plants}}

@@ -73,8 +73,10 @@
 		.main-ew {
 			font-family: didot;
 			font-weight: bold;
-			border: 3px bold black;
-			border-radius: 20px;
+			color: beige;
+			background-color: #333;
+			border-radius: 15px;
+			padding-left: 10px;
 			transform: scale(1) translate(0px, 30%);
 		}
 
@@ -132,8 +134,19 @@
 			transform: translate(40px, 10px);
 		}
 
+		.waterTitle {
+			font-weight: bold;
+			font-family: didot; 
+			font-size: large;  
+			border-bottom: 6px dotted;
+			width: 25px;
+			width: 180px;
+			padding: 5px;
+		}
+
 		.add-button-wrapper {
 			transform: translate(120px, -20px);
+			border-radius: 20%;
 
 		}
 
@@ -206,21 +219,21 @@
 	</header>
 	<section>
 		<div class="essentials-wrapper">
-			<p class="main-ew">{{essential-1}}</p>
+			<p class="main-ew" style="border:1px solid black; width: 35%" >{{essential-1}}</p>
 			<li>{{essential-2}}</li>
 			<li>{{essential-3}}</li>
 			<li>{{essential-4}}</li>
 		</div>
 
 		<div class="whatNotToDo-wrapper">
-			<p class="main-ew">{{whatNotToDo-1}}</p>
+			<p class="main-ew" style="border:1px solid black; width: 39%">{{whatNotToDo-1}}</p>
 			<li>{{whatNotToDo-2}}</li>
 			<li>{{whatNotToDo-3}}</li>
 			<li>{{whatNotToDo-4}}</li>
 		</div>
 
 		<div class="plantCalendar">
-			<strong>Select Watering Days</strong>
+			<p class="waterTitle" style="">Select Watering Days</p>
 			<p>The chosen watering days will be displayed on the Plant Calendar.</p>
 
 			<button class="monday-button-wrapper" style="background-color:salmon;" onclick="alert('Monday')">
