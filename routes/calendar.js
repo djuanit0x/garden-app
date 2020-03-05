@@ -9,18 +9,19 @@ exports.view = function(req, res) {
 
     for (let idx = 0; idx < data.plants.length; idx++) {
         let plantName = data.plants[idx].name;
+        let plantId = data.plants[idx].id;
         let schedules = data.plants[idx].schedules;
         let color = data.plants[idx].color;
 
         allSchedules.push({
             plantName,
+            plantId,
             schedules,
             color
         });
     }
     let schedulesObj = {};
     schedulesObj.allSchedules = allSchedules;
-
     res.render("calendar", schedulesObj);
 };
 
