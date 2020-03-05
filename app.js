@@ -13,7 +13,9 @@ var DB = require("./routes/DB.js");
 var plant = require("./routes/plant.js");
 var calendar = require("./routes/calendar.js");
 var login = require("./routes/login.js");
+var HomeB = require("./routes/HomeB.js");
 var app = express();
+
 
 // all environments
 app.set("port", process.env.PORT || 3000);
@@ -38,13 +40,13 @@ if ("development" == app.get("env")) {
 app.get("/", index.view);
 app.get("/DB", DB.view);
 
-
 app.get("/calendar", calendar.view);
 app.get("/login", login.view);
 
 app.get("/plant/:id", plant.view);
 app.post("/add", index.addPlant);
 app.post("/delete", index.deletePlant);
+app.get("/HomeB", HomeB.view);
 
 // Example route
 // app.get('/users', user.list);

@@ -1,7 +1,7 @@
 <html>
 
 <head>
-    <title>Dashboard</title>
+    <title>HomeB</title>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="js/bootstrap.js"> </script>
@@ -18,7 +18,7 @@
     <link rel="stylesheet" href="css/reset.css" />
     <style>
         .avatar {
-            /*vertical-align: middle;*/
+            vertical-align: middle;
             width: 110px;
             height: 110px;
             border: 2px solid black;
@@ -33,31 +33,34 @@
         .plant-title-container {}
 
         .plants-wrapper {
-            display: inline-flex;*/
+            /*display: inline-flex;*/
+            flex-wrap: wrap;
             position: fixed;
             overflow: scroll;
             flex-direction: row;
-            flex-wrap: wrap;
             transform: scale(1) translate(15px, 18%);
             width: 80vw;
             height:75vh;
-            /*border: 5px solid black; */
-            /*border-radius: 30px;*/
-            /*border: 5px solid black;
-            /*border-radius: 15px;*/
+            border: 5px solid #333;
+            border-radius: 15px;
+            z-index: 99;
+            background-image: url('images/testimg.png');
+            background-size: 210% 110%;
+            background-position: 15% -15%;
+
         }
 
         .plant-wrapper {
             display: flex;
-            flex-direction: column;
-            width: 45%;
+            flex-direction: row;
+            width: 80vw;
             padding: 4%;
             transform: scale(1) translate(15px, 5%);
         }
 
         .container {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
         }
 
 
@@ -86,18 +89,20 @@
         .special {
             font-family: didot;
             color: white;
-            text-align: center;
+            /*text-align: center;*/
             margin-left: 11%;
         }
 
         .specialname {
             font-family: didot;
-            position: center;
+            /*position: center;*/
             padding-left: 20px;
-            padding-top: 0.5rem;
+            padding: 1rem;
             color: white;
-            text-shadow: 0 0 1px gray, 0 0 3px gray;
-
+            text-shadow: 0 0 2px lightgray, 0 0 5px lightgray;
+            width: 80vw;
+            position: center;
+            transform: scale(1) translate(0px, 20%);
         }
 
         /* The sidebar menu */
@@ -112,7 +117,6 @@
             margin-bottom: 1rem;
             transform: scale(1) translate(11px, -140%);
             z-index: 99;
-
         }
 
         .navbar a {
@@ -153,7 +157,7 @@
 
         .mid-container {
             display: flex;
-            flex-direction: column;
+            flex-direction: row;
         }
 
         /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
@@ -176,7 +180,11 @@
             width: 60px;
             height: 60px;
             display: flex;
-            transform: scale(1) translate(250px, 50%);
+            transform: scale(1) translate(195px, 1025%);
+            top: 60px;
+            left: 80px;
+            position: relative;
+            z-index: 100;
         }
     </style>
 
@@ -247,12 +255,6 @@
             <a href="/calendar">Calendar</a>
             <a href="/DB">Discover</a>
 
-            <!--{{#if plants}}
-            <a href='/DB' class="addPlantButton">
-                <img src="/images/addButton@2x.png" alt="Add Plant">
-            </a>
-            {{/if}}-->
-
         </div>
 
         <!--<div id="main">
@@ -278,7 +280,7 @@
                 </div>
                 {{else}}
                 <div>
-                    <p>You currently don't have plants! Add your plants by clicking the button below</p>
+                    <p>You currently don't have plants! Add your plants by clicking the plus button below</p>
                     <div class="addPlantButton">
                         <!--<button class="addButton" onclick="openNav()">&#9776;</button>-->
 
@@ -290,12 +292,14 @@
                 </div>
                 {{/each}}
 
-        </div>
+            </div>
 
             <div class="addPlantButton">
+                <!--<button class="addButton" onclick="openNav()">&#9776;</button>-->
 
                 {{#if plants}}
                 <div class="addPlantButton">
+                    <!--<button class="addButton" onclick="openNav()">&#9776;</button>-->
 
 
                     <a href='/DB'>
