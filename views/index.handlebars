@@ -9,6 +9,12 @@
     <link rel="stylesheet" href="css/bootstrap-theme.css">
     <link rel="stylesheet" href="css/home.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script> 
+        @viewport {
+            width: device-width;
+            zoom: 1.0;
+        }
+    </script>
     <link rel="stylesheet" href="css/reset.css" />
     <style>
         .avatar {
@@ -22,17 +28,18 @@
         .plant-title-container {}
 
         .plants-wrapper {
-            display: flex;
-            overflow: hidden;
+            display: inline-flex;*/
+            position: fixed;
+            overflow: scroll;
             flex-direction: row;
             flex-wrap: wrap;
-            transform: scale(1) translate(15px, 25%);
-            width: 320px;
-            height: 590px;
+            transform: scale(1) translate(15px, 18%);
+            width: 80vw;
+            height:75vh;
             /*border: 5px solid black; */
-            border-radius: 30px;
-            /*border: 5px solid black;*/
-            border-radius: 15px;
+            /*border-radius: 30px;*/
+            border: 5px solid black;
+            /*border-radius: 15px;*/
         }
 
         .plant-wrapper {
@@ -60,7 +67,7 @@
             margin: 1.75rem;
             margin-bottom: 2rem;
             margin-top: 3rem;
-            padding: 6px;
+            padding: 10px;
             transform: scale(1) translate(10px, -30%);
             background-color: #333;
             position: fixed;
@@ -89,14 +96,14 @@
         /* The sidebar menu */
         .navbar {
             background-color: #333;
-            position: absolute;
+            position: fixed;
             top:100%;
             bottom: 0;
-            width: 87%;
+            width: 87vw;
             z-index: 99;
             border-radius: 35px;
             margin-bottom: 1rem;
-            transform: scale(1) translate(11px, -30%);
+            transform: scale(1) translate(11px, -140%);
             z-index: 99;
         }
 
@@ -108,10 +115,10 @@
             text-align: center;
             padding: 14px;
             text-decoration: none;
-            font-size: 17px;
+            font-size: 5vw;
             font-family: didot;
 
-            margin-top: 2px;
+            margin-top: 1px;
             margin-left: 7px;
         }
 
@@ -216,7 +223,7 @@
         <div class="navbar">
             <a href="/" class="active">Home</a>
             <a href="/calendar">Calendar</a>
-            <a href="/DB">View Plants</a>
+            <a href="/DB">Discover</a>
 
         </div>
 
