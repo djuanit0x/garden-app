@@ -7,12 +7,6 @@
 	{{!-- <script src="js/bootstrap.js"> </script>
 	<script src="js/hci-friends.js"></script> --}}
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<script> 
-		@viewport {
-			width: device-width;
-			zoom: 1.0;
-		}
-	</script>
 	<style>
 		.avatar {
 			/*vertical-align: middle;*/
@@ -142,8 +136,8 @@
 
 		.waterTitle {
 			font-weight: bold;
-			font-family: didot; 
-			font-size: large;  
+			font-family: didot;
+			font-size: large;
 			border-bottom: 6px dotted;
 			width: 25px;
 			width: 180px;
@@ -172,6 +166,29 @@
 				document.querySelector(".add-button-wrapper").style.visibility = "hidden";
 				document.querySelector(".delete-button-wrapper").style.visibility = "visible";
 			}
+
+
+			const daysButton = $('.plantCalendar').children('button').get();
+
+			daysButton.forEach(el => {
+				el.addEventListener('click', function () {
+					const plantId = el.dataset.value;
+					const newDay = el.dataset.day;
+
+					try {
+
+						$.post("/calendar/add", { plantId: plantId, day: newDay }, function (data) {
+							console.log("success");
+						});
+
+					} catch (err) {
+						console.err(err)
+					}
+
+				});
+			});
+
+
 
 			// Handler for .ready() called.
 			const addButtonEl = $('.add-button-wrapper').children('button').get()[0];
@@ -209,6 +226,7 @@
 
 
 
+
 		})
 	</script>
 	<header>
@@ -225,7 +243,7 @@
 	</header>
 	<section>
 		<div class="essentials-wrapper">
-			<p class="main-ew" style="border:1px solid black; width: 35%" >{{essential-1}}</p>
+			<p class="main-ew" style="border:1px solid black; width: 35%">{{essential-1}}</p>
 			<li>{{essential-2}}</li>
 			<li>{{essential-3}}</li>
 			<li>{{essential-4}}</li>
@@ -242,31 +260,38 @@
 			<p class="waterTitle" style="">Select Watering Days</p>
 			<p>The chosen watering days will be displayed on the Plant Calendar.</p>
 
-			<button class="monday-button-wrapper" style="background-color:salmon;" onclick="alert('Monday')">
+			<button class="monday-button-wrapper" data-day="Monday" data-value={{id}} style="background-color:salmon;"
+				onclick="alert('Monday')">
 				M
 			</button>
 
-			<button class="tuesday-button-wrapper" style="background-color:salmon;" onclick="alert('Tuesday!')">
+			<button class="tuesday-button-wrapper" data-day="Tuesday" data-value={{id}} style="background-color:salmon;"
+				onclick="alert('Tuesday!')">
 				Tu
 			</button>
 
-			<button class="wednesday-button-wrapper" style="background-color:salmon;" onclick="alert('Wednesday!')">
+			<button class="wednesday-button-wrapper" data-day="Wednesday" data-value={{id}}
+				style="background-color:salmon;" onclick="alert('Wednesday!')">
 				W
 			</button>
 
-			<button class="thursday-button-wrapper" style="background-color:salmon;" onclick="alert('Thursday!')">
+			<button class="thursday-button-wrapper" data-day="Thursday" data-value={{id}}
+				style="background-color:salmon;" onclick="alert('Thursday!')">
 				Th
 			</button>
 
-			<button class="friday-button-wrapper" style="background-color:salmon;" onclick="alert('Friday!')">
+			<button class="friday-button-wrapper" data-day="Friday" data-value={{id}} style="background-color:salmon;"
+				onclick="alert('Friday!')">
 				F
 			</button>
 
-			<button class="saturday-button-wrapper" style="background-color:salmon;" onclick="alert('Saturday!')">
+			<button class="saturday-button-wrapper" data-day="Saturday" data-value={{id}}
+				style="background-color:salmon;" onclick="alert('Saturday!')">
 				Sa
 			</button>
 
-			<button class="sunday-button-wrapper" style="background-color:salmon;" onclick="alert('Sunday!')">
+			<button class="sunday-button-wrapper" data-day="Sunday" data-value={{id}} style="background-color:salmon;"
+				onclick="alert('Sunday!')">
 				Su
 			</button>
 

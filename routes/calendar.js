@@ -23,3 +23,28 @@ exports.view = function(req, res) {
 
     res.render("calendar", schedulesObj);
 };
+
+exports.add = function(req, res) {
+    if (req.body) {
+        const plantIdToFind = req.body.plantId;
+        const day = req.body.day;
+
+        console.log(plantIdToFind)
+        console.log(day)
+        // finding the plant based on their assigned unique id
+
+        for (let idx = 0; idx < data.plants.length; idx++) {
+            if (data.plants[idx].id === plantIdToFind) {
+                if (!data.plants[idx].schedules.days.includes(day)) {
+                    data.plants[idx].schedules.days.push(day);
+                    console.log("Add day to the schedule!");
+                } else {
+                    console.log("Duplicate day of the schedule!");
+                }
+            }
+        }
+    } else {
+        console.error("No Body in the'req'");
+    }
+
+};
