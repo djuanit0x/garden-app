@@ -19,7 +19,7 @@
 
             "schedules": {
                 "note": "...One\u00a0cup\u00a0of\u00a0water\u00a0ever\u00a0two\u00a0-\u00a0three\u00a0weeks)",
-                "days": ["Wednesday", "Friday"],
+                "days": [],
                 "color": "#ffa7bf"
             }
         },
@@ -41,7 +41,7 @@
 
             "schedules": {
                 "note": "(Water\u00a01\u00a0-\u00a02\u00a0inches\u00a0per\u00a0week)",
-                "days": ["Tuesday", "Thursday", "Saturday"],
+                "days": [],
                 "color": "#74ffd9"
             }
         },
@@ -63,7 +63,7 @@
 
             "schedules": {
                 "note": "(Water\u00a01\u00a0-\u00a02\u00a0inches\u00a0per\u00a0week)",
-                "days": ["Tuesday", "Thursday", "Saturday"],
+                "days": [],
                 "color": "#ab0000"
             }
         }
@@ -88,7 +88,7 @@
 
             "schedules": {
                 "note": "(One\u00a0cup\u00a0of\u00a0water\u00a0ever\u00a0two\u00a0-\u00a0three\u00a0weeks)",
-                "days": ["Wednesday", "Friday"],
+                "days": [],
                 "color": "#ffa7bf"
             }
         },
@@ -110,7 +110,7 @@
 
             "schedules": {
                 "note": "(1\u00a0cup\u00a0of\u00a0water\u00a0ever\u00a02\u00a0-\u00a03\u00a0weeks)",
-                "days": ["Wednesday", "Friday"],
+                "days": [],
                 "color": "#74ffd9"
             }
         },
@@ -132,7 +132,7 @@
 
             "schedules": {
                 "note": " (1\u00a0cup\u00a0of\u00a0water\u00a0ever\u00a02\u00a0-\u00a03\u00a0weeks)",
-                "days": ["Wednesday", "Friday"],
+                "days": [],
                 "color": "#ab0000"
             }
         },
@@ -154,7 +154,7 @@
 
             "schedules": {
                 "note": " (1\u00a0cup\u00a0of\u00a0water\u00a0ever\u00a02\u00a0-\u00a03\u00a0weeks)",
-                "days": ["Wednesday", "Friday"],
+                "days": [],
                 "color": "#ea3132"
             }
         },
@@ -176,7 +176,7 @@
 
             "schedules": {
                 "note": " (Water\u00a01\u00a0-\u00a02\u00a0inches\u00a0per\u00a0week)",
-                "days": ["Tuesday", "Thursday", "Saturday"],
+                "days": [],
                 "color": "#ccff66"
             }
         },
@@ -198,7 +198,7 @@
 
             "schedules": {
                 "note": " (Water\u00a0=\u00a02\u00a0inches\u00a0every\u00a0other\u00a0week)",
-                "days": ["Sunday"],
+                "days": [],
                 "color": "#b6fcd5"
             }
         },
@@ -220,7 +220,7 @@
 
             "schedules": {
                 "note": " (1\u00a0cup\u00a0of\u00a0water\u00a0ever\u00a02\u00a0-\u00a03\u00a0weeks)",
-                "days": ["Wednesday", "Friday"],
+                "days": [],
                 "color": "#e6e6fa"
             }
         },
@@ -242,7 +242,7 @@
 
             "schedules": {
                 "note": " - (Water\u00a01\u00a0-\u00a02\u00a0inches\u00a0per\u00a0week)",
-                "days": ["Tuesday", "Thursday", "Saturday"],
+                "days": [],
                 "color": "#b2dfee"
             }
         },
@@ -264,7 +264,7 @@
 
             "schedules": {
                 "note": " (Water\u00a0=\u00a02\u00a0inches\u00a0every\u00a0other\u00a0week)",
-                "days": ["Sunday"],
+                "days": [],
                 "color": "#0095b6"
             }
         }

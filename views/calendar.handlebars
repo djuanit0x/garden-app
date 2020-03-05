@@ -5,12 +5,6 @@
     <title>Calendar</title>
     <meta charset='utf-8' />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script> 
-        @viewport {
-            width: device-width;
-            zoom: 1.0;
-        }
-    </script>
     <link rel="stylesheet" href="css/home.css">
     <link rel="stylesheet" href="css/reset.css" />
 
@@ -58,9 +52,7 @@
     </script>
 
     <style>
-        @viewport {
-
-        }
+        @viewport {}
 
 
         /* The sidebar menu */
@@ -196,9 +188,17 @@
 
 
                 const plantName = plantSchedulesEl.dataset.name;
+                const plantId = plantSchedulesEl.dataset.value;
                 const plantColor = plantSchedulesEl.dataset.color;
 
                 $(plantSchedulesEl).children('.event-calendar').get().forEach(el => {
+
+                    el.addEventListener('click', function () {
+                        window.location = `plant/${plantId}`
+                    });
+
+
+
                     const currSchedule = el.dataset.schedule;
 
                     const note = el.dataset.note;
@@ -319,7 +319,7 @@
 
             {{#each allSchedules}}
 
-            <div class="event-calendar-wrapper" data-name={{plantName}} data-color={{color}}>
+            <div class="event-calendar-wrapper" data-value={{plantId}} data-name={{plantName}} data-color={{color}}>
 
 
                 {{#each schedules.days}}

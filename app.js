@@ -41,6 +41,9 @@ app.get("/", index.view);
 app.get("/DB", DB.view);
 
 app.get("/calendar", calendar.view);
+app.get("/calendar/get/:plantId", calendar.getSchedules);
+app.post("/calendar/update", calendar.update);
+
 app.get("/login", login.view);
 
 app.get("/plant/:id", plant.view);
