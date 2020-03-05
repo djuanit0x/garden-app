@@ -179,20 +179,24 @@
 						$.post("/calendar/update", { plantId: plantId, day: dayToUpdate }, function (data) {
 							console.log("success");
 						});
-
-						if (el.style.backgroundColor === "salmon") {
-							el.style.backgroundColor = "#84fa84";
-						} else {
-							el.style.backgroundColor = "salmon";
-						}
-
-
+						location.reload();
 					} catch (err) {
 						console.err(err)
 					}
 
 				});
 			});
+
+
+			daysButton.forEach(el => {
+				const plantId = el.dataset.value;
+				const _day = el.dataset.day;
+				$.get(`/calendar/get/${plantId}`, function (data) {
+					if (data.days.includes(_day)) {
+						el.style.backgroundColor = "#84fa84";
+					}
+				});
+			})
 
 
 			// Handler for .ready() called.

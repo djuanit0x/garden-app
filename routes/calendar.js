@@ -48,3 +48,17 @@ exports.update = function(req, res) {
         console.error("No Body in the'req'");
     }
 };
+
+exports.getSchedules = function(req, res) {
+    const plantIdToFind = req.params.plantId;
+
+    // finding the plant based on their assigned unique id
+
+    for (let idx = 0; idx < data.plants.length; idx++) {
+        if (data.plants[idx].id === plantIdToFind) {
+            res.status(202).send({days: data.plants[idx].schedules.days});
+        } else {
+            console.log("Not found any schedules!")
+        }
+    }
+};
