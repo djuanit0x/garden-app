@@ -173,13 +173,19 @@
 			daysButton.forEach(el => {
 				el.addEventListener('click', function () {
 					const plantId = el.dataset.value;
-					const newDay = el.dataset.day;
+					const dayToUpdate = el.dataset.day;
 
 					try {
-
-						$.post("/calendar/add", { plantId: plantId, day: newDay }, function (data) {
+						$.post("/calendar/update", { plantId: plantId, day: dayToUpdate }, function (data) {
 							console.log("success");
 						});
+
+						if (el.style.backgroundColor === "salmon") {
+							el.style.backgroundColor = "#84fa84";
+						} else {
+							el.style.backgroundColor = "salmon";
+						}
+
 
 					} catch (err) {
 						console.err(err)
@@ -187,7 +193,6 @@
 
 				});
 			});
-
 
 
 			// Handler for .ready() called.
@@ -224,9 +229,6 @@
 				}
 			});
 
-
-
-
 		})
 	</script>
 	<header>
@@ -260,38 +262,35 @@
 			<p class="waterTitle" style="">Select Watering Days</p>
 			<p>The chosen watering days will be displayed on the Plant Calendar.</p>
 
-			<button class="monday-button-wrapper" data-day="Monday" data-value={{id}} style="background-color:salmon;"
-				onclick="alert('Monday')">
+			<button class="monday-button-wrapper" data-day="Monday" data-value={{id}} style="background-color:salmon;">
 				M
 			</button>
 
-			<button class="tuesday-button-wrapper" data-day="Tuesday" data-value={{id}} style="background-color:salmon;"
-				onclick="alert('Tuesday!')">
+			<button class="tuesday-button-wrapper" data-day="Tuesday" data-value={{id}}
+				style="background-color:salmon;">
 				Tu
 			</button>
 
 			<button class="wednesday-button-wrapper" data-day="Wednesday" data-value={{id}}
-				style="background-color:salmon;" onclick="alert('Wednesday!')">
+				style="background-color:salmon;">
 				W
 			</button>
 
 			<button class="thursday-button-wrapper" data-day="Thursday" data-value={{id}}
-				style="background-color:salmon;" onclick="alert('Thursday!')">
+				style="background-color:salmon;">
 				Th
 			</button>
 
-			<button class="friday-button-wrapper" data-day="Friday" data-value={{id}} style="background-color:salmon;"
-				onclick="alert('Friday!')">
+			<button class="friday-button-wrapper" data-day="Friday" data-value={{id}} style="background-color:salmon;">
 				F
 			</button>
 
 			<button class="saturday-button-wrapper" data-day="Saturday" data-value={{id}}
-				style="background-color:salmon;" onclick="alert('Saturday!')">
+				style="background-color:salmon;">
 				Sa
 			</button>
 
-			<button class="sunday-button-wrapper" data-day="Sunday" data-value={{id}} style="background-color:salmon;"
-				onclick="alert('Sunday!')">
+			<button class="sunday-button-wrapper" data-day="Sunday" data-value={{id}} style="background-color:salmon;">
 				Su
 			</button>
 

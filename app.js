@@ -40,7 +40,8 @@ app.get("/DB", DB.view);
 
 
 app.get("/calendar", calendar.view);
-app.post("/calendar/add", calendar.add);
+app.post("/calendar/update", calendar.update);
+
 app.get("/login", login.view);
 
 app.get("/plant/:id", plant.view);

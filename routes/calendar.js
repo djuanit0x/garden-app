@@ -24,13 +24,11 @@ exports.view = function(req, res) {
     res.render("calendar", schedulesObj);
 };
 
-exports.add = function(req, res) {
+exports.update = function(req, res) {
     if (req.body) {
         const plantIdToFind = req.body.plantId;
         const day = req.body.day;
 
-        console.log(plantIdToFind)
-        console.log(day)
         // finding the plant based on their assigned unique id
 
         for (let idx = 0; idx < data.plants.length; idx++) {
@@ -39,12 +37,14 @@ exports.add = function(req, res) {
                     data.plants[idx].schedules.days.push(day);
                     console.log("Add day to the schedule!");
                 } else {
-                    console.log("Duplicate day of the schedule!");
+                    const idxDayToDelete = data.plants[idx].schedules.days.findIndex(el => el === day);
+
+                    data.plants[idx].schedules.days.splice(idxDayToDelete, 1);
+                    console.log("Delete a day from the schedule!");
                 }
             }
         }
     } else {
         console.error("No Body in the'req'");
     }
-
 };
