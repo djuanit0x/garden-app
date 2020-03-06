@@ -148,7 +148,7 @@
 		.add-button-wrapper {
 			transform: translate(120px, -20px);
 			border-radius: 20%;
-			border:;
+			border: ;
 		}
 
 		.delete-button-wrapper {
@@ -210,11 +210,17 @@
 				const plantName = addButtonEl.dataset.name;
 
 				try {
+					const flag = window.confirm(`Are you sure want to add ${plantName} to your plants`)
 
-					$.post("/add", { plantId: plantId }, function (data) {
-						console.log("success");
-					});
-					window.alert(`Add ${plantName} to my plants`)
+					if (flag) {
+						$.post("/add", { plantId: plantId }, function (data) {
+							console.log("success");
+						});
+					} else {
+						// do nothing
+					}
+
+
 				} catch (err) {
 					console.err(err)
 				}
@@ -225,10 +231,18 @@
 				const plantName = deleteButtonEl.dataset.name;
 
 				try {
-					$.post("/delete", { plantId: plantId }, function (data) {
-						console.log("success");
-					});
-					window.location.href = "/"
+					const flag = window.confirm(`Are you sure want to delete ${plantName} from your plants`);
+
+					if (flag) {
+						$.post("/delete", { plantId: plantId }, function (data) {
+							console.log("success");
+						});
+
+						window.location.href = "/"
+					} else {
+						// do nothing
+					}
+
 				} catch (err) {
 					console.err(err)
 				}
