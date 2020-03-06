@@ -61,7 +61,7 @@
             width: 87%;
             border-radius: 35px;
             margin-bottom: 1rem;
-            transform: scale(1) translate(26.5px, 5%);
+            transform: scale(1) translate(26.5px, -35%);
             z-index: 1;
         }
 
@@ -121,6 +121,8 @@
         /* calendar styles */
         .calendar-image-wrapper {
             position: relative;
+            overflow: scroll;
+            height: 100vh;
         }
 
         .calendar-image {
@@ -138,6 +140,14 @@
             border-radius: 50%;
             background-color: chartreuse;
             z-index: 1;
+        }
+
+        .event-calendar-wrapper {
+            overflow: scroll;
+            border: 1px solid black;
+            height: 2vh;
+            max-width: 93vw;
+            border-color: transparent;
         }
 
         .plants-information-container {
@@ -284,7 +294,7 @@
     </script>
 </head>
 
-<body>
+<body style="background-color: azure">
 
     <!-- Sidebar -->
     <div class="navbar">
@@ -313,14 +323,14 @@
         <button class="openbtn" onclick="openNav()">&#9776;</button>
     </div>-->
     <div id='calendar'>
-        <div class="calendar-image-wrapper" style="transform: scale(1) translate(10px, 150%); height: 80px">
+        <div class="calendar-image-wrapper" style="transform: scale(1) translate(10px, 35%); height: 33vh" overflow>
 
             <img class="calendar-image" src="/images/calendar.png" alt="">
 
 
             {{#each allSchedules}}
 
-            <div class="event-calendar-wrapper" data-value={{plantId}} data-name={{plantName}} data-color={{color}}>
+            <div class="event-calendar-wrapper" data-value={{plantId}} data-name={{plantName}} data-color={{color}} overflow>
 
 
                 {{#each schedules.days}}

@@ -14,7 +14,7 @@
 			height: 125px;
 			border: 1px solid black;
 			border-radius: 50%;
-			transform: scale(1) translate(10px, -90%);
+			transform: scale(1) translate(10px, -80%);
 
 		}
 
@@ -47,8 +47,9 @@
 
 		.pagetitle {
 			font-family: didot;
-			font-size: ;
-			transform: scale(1) translate(155px, 40%);
+			width: 60vw;
+			font-size: 7vw;
+			transform: scale(1) translate(150px, 40%);
 		}
 
 		.formalname {
@@ -59,29 +60,43 @@
 
 		.essentials-wrapper {
 			font-family: didot;
+			font-size: 4vw;
 			transform: scale(1) translate(10px, -80%);
 			border: 3px bold black;
-			width: 95%;
+			width: 90vw;
+			margin-top: 8vh;
 		}
 
 		.whatNotToDo-wrapper {
 			font-family: didot;
+			font-size: 4vw;
 			transform: scale(1) translate(10px, -60%);
-			width: 95%;
+			width: 90vw;
 		}
 
 		.main-ew {
 			font-family: didot;
 			font-weight: bold;
+			font-size: 4.5vw;
 			color: beige;
 			background-color: #333;
 			border-radius: 15px;
 			padding-left: 10px;
+			padding-right: 10px;
 			transform: scale(1) translate(0px, 30%);
 		}
 
+		.info {
+			border:2px solid black;
+			border-radius: 20px;
+			text-align: left;
+			padding: 20px;
+			width: 80vw;
+			background-color: azure;
+		}
+
 		.plantCalendar {
-			transform: translate(10px, -60px);
+			transform: translate(10px, -95px);
 			/*border: 5px bold black;*/
 		}
 
@@ -152,7 +167,7 @@
 		}
 
 		.delete-button-wrapper {
-			transform: translate(120px, -20px);
+			transform: translate(120px, -75px);
 
 		}
 	</style>
@@ -255,7 +270,7 @@
 
 <body style="background-color:beige;">
 	<form>
-		<input type="button" value="Back" onclick="history.go(-1)">
+		<input type="button" value="Go Back" onclick="history.go(-1)">
 		<!--<img class="backbutton">-->
 	</form>
 	<h1 class="pagetitle">{{name}}</h1>
@@ -265,21 +280,25 @@
 	<section>
 		<div class="essentials-wrapper">
 			<p class="main-ew" style="border:1px solid black; width: 35%">{{essential-1}}</p>
-			<li>{{essential-2}}</li>
-			<li>{{essential-3}}</li>
-			<li>{{essential-4}}</li>
+			<div class="info">
+				<li>{{essential-2}}</li>
+				<li>{{essential-3}}</li>
+				<li>{{essential-4}}</li>
+			</div>
 		</div>
 
 		<div class="whatNotToDo-wrapper">
 			<p class="main-ew" style="border:1px solid black; width: 39%">{{whatNotToDo-1}}</p>
-			<li>{{whatNotToDo-2}}</li>
-			<li>{{whatNotToDo-3}}</li>
-			<li>{{whatNotToDo-4}}</li>
+			<div class="info">
+				<li>{{whatNotToDo-2}}</li>
+				<li>{{whatNotToDo-3}}</li>
+				<li>{{whatNotToDo-4}}</li>
+			</div>	
 		</div>
 
 		<div class="plantCalendar">
 			<p class="waterTitle" style="">Select Watering Days</p>
-			<p>The chosen watering days will be displayed on the Plant Calendar.</p>
+			<p>After adding this plant to your profile, you may choose watering days that will be displayed on the Plant Calendar.</p>
 
 			<button class="monday-button-wrapper" data-day="Monday" data-value={{id}} style="background-color:salmon;">
 				M
