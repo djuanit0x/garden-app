@@ -52,8 +52,6 @@
     </script>
 
     <style>
-
-
         /* The sidebar menu */
         .navbar {
             overflow: hidden;
@@ -257,6 +255,8 @@
                 // Plant Name
                 const plantNameEl = document.createElement('p');
                 plantNameEl.innerText = name;
+                plantNameEl.style.marginLeft = "8px";
+                plantNameEl.style.marginTop = "8px";
 
                 // Wrapper for each plant notes
                 const plantInfoWrapperEl = document.createElement('div');
@@ -270,6 +270,8 @@
                 // An actual Plant note
                 const plantNoteEl = document.createElement('p')
                 plantNoteEl.innerText = note;
+                plantNoteEl.style.marginLeft = "8px";
+                plantNoteEl.style.marginTop = "8px";
 
                 // Construct the elements from children to parent nodes
                 el.appendChild(plantInfoWrapperEl)
