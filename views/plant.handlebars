@@ -71,7 +71,7 @@
 		.whatNotToDo-wrapper {
 			font-family: didot;
 			font-size: 4vw;
-			transform: scale(1) translate(10px, -100%);
+			transform: scale(1) translate(10px, -120%);
 			width: 90vw;
 		}
 
@@ -97,7 +97,9 @@
 		}
 
 		.plantCalendar {
-			transform: translate(10px, -125px);
+			transform: translate(5px, -185px);
+			text-align: center;
+			width:95vw;
 			/*border: 5px bold black;*/
 		}
 
@@ -105,7 +107,7 @@
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
-			transform: translate(10px, 10px);
+			transform: translate(-20px, 10px);
 
 		}
 
@@ -113,42 +115,42 @@
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
-			transform: translate(15px, 10px);
+			transform: translate(-15px, 10px);
 		}
 
 		.wednesday-button-wrapper {
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
-			transform: translate(20px, 10px);
+			transform: translate(-10px, 10px);
 		}
 
 		.thursday-button-wrapper {
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
-			transform: translate(25px, 10px);
+			transform: translate(-5px, 10px);
 		}
 
 		.friday-button-wrapper {
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
-			transform: translate(30px, 10px);
+			transform: translate(0px, 10px);
 		}
 
 		.saturday-button-wrapper {
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
-			transform: translate(35px, 10px);
+			transform: translate(5px, 10px);
 		}
 
 		.sunday-button-wrapper {
 			width: 40px;
 			height: 40px;
 			border-radius: 50%;
-			transform: translate(40px, 10px);
+			transform: translate(10px, 10px);
 		}
 
 		.waterTitle {
@@ -159,6 +161,8 @@
 			width: 25px;
 			width: 180px;
 			padding: 5px;
+			transform: translate(-5px, 10px);
+			display: inline-block;
 		}
 
 		.add-button-wrapper {
@@ -168,7 +172,7 @@
 		}
 
 		.delete-button-wrapper {
-			transform: translate(120px, -75px);
+			transform: translate(120px, -140px);
 
 		}
 	</style>
@@ -210,7 +214,7 @@
 				const _day = el.dataset.day;
 				$.get(`/calendar/get/${plantId}`, function (data) {
 					if (data.days.includes(_day)) {
-						el.style.backgroundColor = "#84fa84";
+						el.style.backgroundColor = "#00FF80";
 					}
 				});
 			})
@@ -269,7 +273,7 @@
 	<header>
 </head>
 
-<body style="background-color:beige;">
+<body style="width: 98vw; background-color:beige;">
 	<form>
 		<input type="button" value="Go Back" onclick="history.go(-1)">
 		<!--<img class="backbutton">-->
@@ -298,38 +302,38 @@
 		</div>
 
 		<div class="plantCalendar">
-			<p class="waterTitle" style="">Select Watering Days</p>
-			<p>After adding this plant to your profile, you may choose watering days that will be displayed on the Plant Calendar.</p>
+			<h1 class="waterTitle">Select Watering Days</h1>
+			<p style="padding-left:3%; padding-right: 3%;">After adding this plant to your profile, you may choose watering days that will be displayed on the Plant Calendar.</p>
 
-			<button class="monday-button-wrapper" data-day="Monday" data-value={{id}} style="background-color:salmon;">
+			<button class="monday-button-wrapper" data-day="Monday" data-value={{id}} style="background-color:white; border:2.5px solid black; font-weight: bold; ">
 				M
 			</button>
 
 			<button class="tuesday-button-wrapper" data-day="Tuesday" data-value={{id}}
-				style="background-color:salmon;">
+				style="background-color:white; border:2.5px solid black; font-weight: bold;">
 				Tu
 			</button>
 
 			<button class="wednesday-button-wrapper" data-day="Wednesday" data-value={{id}}
-				style="background-color:salmon;">
+				style="background-color:white; border:2.5px solid black; font-weight: bold;">
 				W
 			</button>
 
 			<button class="thursday-button-wrapper" data-day="Thursday" data-value={{id}}
-				style="background-color:salmon;">
+				style="background-color:white; border:2.5px solid black; font-weight: bold;">
 				Th
 			</button>
 
-			<button class="friday-button-wrapper" data-day="Friday" data-value={{id}} style="background-color:salmon;">
+			<button class="friday-button-wrapper" data-day="Friday" data-value={{id}} style="background-color:white; border:2.5px solid black; font-weight: bold; ">
 				F
 			</button>
 
 			<button class="saturday-button-wrapper" data-day="Saturday" data-value={{id}}
-				style="background-color:salmon;">
+				style="background-color:white; border:2.5px solid black; font-weight: bold;">
 				Sa
 			</button>
 
-			<button class="sunday-button-wrapper" data-day="Sunday" data-value={{id}} style="background-color:salmon;">
+			<button class="sunday-button-wrapper" data-day="Sunday" data-value={{id}} style="background-color:white; border:2.5px solid black; font-weight: bold;">
 				Su
 			</button>
 
