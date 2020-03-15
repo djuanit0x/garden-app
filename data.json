@@ -66,6 +66,50 @@
                 "days": [],
                 "color": "#ab0000"
             }
+        },
+        {
+            "name": "Birds of Paradise",
+            "id": "4",
+            "description": "Strelitzia",
+            "imagePath": "/images/birdsOfParadise.png",
+            "imagePath1": "/images/birdsOfParadise.png",
+            "essential-1": "Need To Know: ",
+            "essential-2": "Does best in warm, tropical tempuratures",
+            "essential-3": " Grows best in bright light, so keep your plant in a sunny area",
+            "essential-4": " Allow solid to become dry to touch between watering days",
+            "whatNotToDo-1": "What Not To Do: ",
+            "whatNotToDo-2": " Does not do well in cold temp",
+            "whatNotToDo-3": " Avoid harsh, direct sunlight ",
+            "whatNotToDo-4": " Avoid over watering! This plant does better with less water ",
+            "color": "#ea3132",
+
+            "schedules": {
+                "note": " (1\u00a0cup\u00a0of\u00a0water\u00a0ever\u00a02\u00a0-\u00a03\u00a0weeks)",
+                "days": [],
+                "color": "#ea3132"
+            }
+        },
+        {
+            "name": "Kumquat Tree",
+            "id": "6",
+            "description": "Citrus Japonica",
+            "imagePath": "/images/kumquat-plant.png",
+            "imagePath1": "/images/kumquat-plant.png",
+            "essential-1": "Need To Know: ",
+            "essential-2": "Does best in room temp (60 - 70  F",
+            "essential-3": "Grows best in bright filtered light",
+            "essential-4": "Allow solid to become dry to touch between watering days",
+            "whatNotToDo-1": "What Not To Do: ",
+            "whatNotToDo-2": "Does not do well in cold temp (45 F and below)",
+            "whatNotToDo-3": "Avoid harsh, direct sunlight ",
+            "whatNotToDo-4": "Avoid over watering! This plant does better with less water ",
+            "color": "#b6fcd5",
+
+            "schedules": {
+                "note": " (Water\u00a0=\u00a02\u00a0inches\u00a0every\u00a0other\u00a0week)",
+                "days": [],
+                "color": "#b6fcd5"
+            }
         }
     ],
     "DB": [
